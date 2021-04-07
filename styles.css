@@ -4,12 +4,15 @@ body{
     display: border-box;
     color: rgba(0,0,0,.75);
     font-family: 'Press Start 2P', cursive;
+    background-color: rgb(150 178 58);
 }
+
 
 .container{
     display: flex;
-    background-color: #9bba5a;
+    /* background-color: #9bba5a; */
     align-items: center;
+    /* width: 100vw; */
     height: 100vh;
 }
 .game-container{
@@ -20,8 +23,12 @@ body{
     width: 300px;
     height: 300px;
     margin: auto;
-    background-color: #9bba5a;
+    /* background-color: #9bba5a; */
 }
+.title{
+    font-size: 30px;
+}
+
 .top-section{
     display: flex;
     flex-direction: column;
@@ -34,7 +41,7 @@ body{
     color: rgba(0,0,0,.75);
     background-color: #9bba5a;
     outline: none;
-    border:none;
+    border: solid rgba(0,0,0,.75) 1.5px;
     border-radius: 2px;
     font-family: 'Press Start 2P', cursive;
     margin: 5px 0px;
@@ -45,10 +52,22 @@ body{
     background-color: rgba(0,0,0,.75);
     color: #9bba5a;
 }
+.start:active {
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+}
 .score-display{
     display: flex;
     justify-content: center;
     font-size: 12px;
+}
+@media(min-width:769px){
+    .score-display {
+    display: flex;
+    justify-content: center;
+    font-size: 14px;
+}
 }
 .snake-grid{
     width: 200px;
@@ -59,11 +78,26 @@ body{
     background-color: #9bba5a;
 
 }
+@media(min-width:769px){
+.snake-grid{
+   width: 400px;
+   height: 400px;
+   display: flex;
+    flex-wrap: wrap;
+    border: solid rgba(0,0,0,.75) 2px;
+    background-color: #9bba5a;
+}
+}
 .snake-grid div{
     width: 20px;
     height: 20px;
 }
-
+@media(min-width:769px){
+    .snake-grid div{
+    width: 40px;
+    height: 40px;
+}
+}
 .snake{
     background-color: rgba(0,0,0,.75);
     border-radius: 5px;
