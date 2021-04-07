@@ -5,121 +5,137 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+      rel="stylesheet"
+    />
     <title>Snake</title>
   </head>
   <body>
     <!-- <div id="output"></div> -->
     <div class="container">
-        <div class="game-container">
-      <div class="top-section">
-        <button class="start">Start/Restart</button>
-        <div class="score-display">Score:<span id="score">0</span></div>
-      </div>
+      <div class="game-container">
+        <div class="top-section">
+          <div class="game-over-signal"></div>
 
-      <div class="snake-grid">
-        <!-- 10x10 grid = 100 divs  -->
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
-        <div id="square"></div>
+          <div class="score-display"><span id="score">0</span></div>
+        </div>
+        <div class="snake-grid">
+          <!-- 10x10 grid = 100 divs  -->
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+          <div id="square"></div>
+        </div>
+        <button class="start">Start</button>
+
+        <div class="arrow-controls-container">
+          <div class="arrow-controls top">
+            <button class="up arrow">▲</button>
+          </div>
+          <div class="arrow-controls bottom">
+            <button class="left arrow">◄</button>
+            <button class="down arrow">▼</button>
+            <button class="right arrow">►</button>
+          </div>
+        </div>
       </div>
-      
     </div>
     <script src="app.js"></script>
   </body>
