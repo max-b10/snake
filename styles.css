@@ -2,11 +2,13 @@ body{
     padding: 0px;
     margin: 0px;
     display: border-box;
+    color: rgba(0,0,0,.75);
+    font-family: 'Press Start 2P', cursive;
 }
 
 .container{
     display: flex;
-    background-color: grey;
+    background-color: #9bba5a;
     align-items: center;
     height: 100vh;
 }
@@ -18,30 +20,99 @@ body{
     width: 300px;
     height: 300px;
     margin: auto;
-    background-color: rgb(165, 148, 148);
+    background-color: #9bba5a;
 }
 .top-section{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: center;
     width: 200px;
     margin-bottom: 10px;
+}
+.start{
+    display:flex;
+    color: rgba(0,0,0,.75);
+    background-color: #9bba5a;
+    outline: none;
+    border:none;
+    border-radius: 2px;
+    font-family: 'Press Start 2P', cursive;
+    margin: 5px 0px;
+    padding: 6px;
+    cursor: pointer;
+}
+.start:hover{
+    background-color: rgba(0,0,0,.75);
+    color: #9bba5a;
+}
+.score-display{
+    display: flex;
+    justify-content: center;
+    font-size: 12px;
 }
 .snake-grid{
     width: 200px;
     height: 200px;
     display: flex;
     flex-wrap: wrap;
-    border:solid black 2px;
-    background-color: rgb(79, 79, 202)
+    border: solid rgba(0,0,0,.75) 2px;
+    background-color: #9bba5a;
+
 }
 .snake-grid div{
     width: 20px;
     height: 20px;
 }
+
 .snake{
-    background-color: rgb(110, 216, 110);
+    background-color: rgba(0,0,0,.75);
+    border-radius: 5px;
+}
+.snake-head{
+    background-color: #284adf;
 }
 .food{
-    background-color: rgb(197, 34, 34);
+    background-color: red;
+    background-color: rgb(255 78 78);
+    border-radius: 50%;
+    /* animation: spin 3.5s linear infinite;
+    border: solid rgba(0,0,0,.75) 1px; */
+}
+.game-over-signal{
+    margin: 7px 0px;
+    font-size: 16px;
+}
+/* @keyframes spin {
+    from {
+        transform: rotate(0)
+    }
+
+    to {
+        transform: rotate(360deg)
+    }
+}  */
+.arrow-controls{
+    display: flex;
+    justify-content: center;
+    padding: 2px;
+}
+.top{
+    margin: 4px 0px 0px 0px;
+}
+.bottom{
+margin: 0 2px;
+}
+.arrow{
+    margin: 0 2px;
+    background-color: rgba(0,0,0,.75);
+    color: #9bba5a;
+    cursor: pointer;
+    border:none;
+    outline: none;
+    padding: 16px;
+}
+.arrow:active {
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
 }
