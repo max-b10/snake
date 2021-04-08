@@ -1,3 +1,5 @@
+const leftSide = document.querySelector(".left-side");
+
 const gridSquares = document.querySelectorAll("#square");
 const startButton = document.querySelector(".start");
 const scoreSpan = document.querySelector("#score");
@@ -9,7 +11,8 @@ const downArrow = document.querySelector(".down");
 const leftArrow = document.querySelector(".left");
 const rightArrow = document.querySelector(".right");
 
-const gameOverDiv = document.querySelector(".game-over-signal");
+const gameOverDivLeft = document.querySelector(".game-over-signal-left");
+const gameOverDivRight = document.querySelector(".game-over-signal-right");
 
 // Width represents the longest the snake can be while in a straight line
 // since the grid is 10x10.
@@ -29,7 +32,8 @@ let isGameOver = false;
 // Start and restart a game:
 function startGame() {
   isGameOver = false;
-  gameOverDiv.style.display = "none";
+  gameOverDivLeft.style.display = "none";
+  gameOverDivRight.style.display = "none";
   snakeGrid.style.background = "#9bba5a";
   startButton.innerHTML = "Start";
   // Remove previous snake:
@@ -92,11 +96,13 @@ function movement() {
 function gameOver() {
   isGameOver = true;
   console.log("game over");
-  gameOverDiv.style.display = "block";
+  gameOverDivLeft.style.display = "block";
+  gameOverDivRight.style.display = "block";
   startButton.style.display = "block";
   scoreSpan.innerHTML = `You scored: ${score}`;
   startButton.innerHTML = "Restart";
-  gameOverDiv.innerHTML = "Game Over!";
+  gameOverDivLeft.innerHTML = "Game-Over!";
+  gameOverDivRight.innerHTML = "Game-Over!";
   snakeGrid.style.background = "#829a50";
 }
 //generate new food each time previous food is 'eaten':
