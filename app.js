@@ -1,5 +1,7 @@
 const leftSide = document.querySelector(".left-side");
 
+const portfolioButton = document.querySelector(".return-button");
+const title = document.querySelector(".title");
 const gridSquares = document.querySelectorAll("#square");
 const startButton = document.querySelector(".start");
 const scoreSpan = document.querySelector("#score");
@@ -13,6 +15,8 @@ const rightArrow = document.querySelector(".right");
 
 const gameOverDivLeft = document.querySelector(".game-over-signal-left");
 const gameOverDivRight = document.querySelector(".game-over-signal-right");
+
+let deviceWidth = document.documentElement.clientWidth || window.innerWidth;
 
 // Width represents the longest the snake can be while in a straight line
 // since the grid is 10x10.
@@ -28,6 +32,10 @@ let speed = 0.9;
 let intervalTime = 0; // in milliseconds used as a parameter in setInterval method.
 let interval = 0;
 let isGameOver = false;
+
+portfolioButton.addEventListener("click", () => {
+  window.location.replace("https://portfoliomax.netlify.app/");
+});
 
 // Start and restart a game:
 function startGame() {
@@ -95,7 +103,10 @@ function movement() {
 }
 function gameOver() {
   isGameOver = true;
-  console.log("game over");
+  // console.log("game over");
+  if (deviceWidth < 769) {
+    title.innerHTML = "GAME OVER!";
+  }
   gameOverDivLeft.style.display = "block";
   gameOverDivRight.style.display = "block";
   startButton.style.display = "block";
