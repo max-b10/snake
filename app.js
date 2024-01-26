@@ -34,7 +34,7 @@ let interval = 0;
 let isGameOver = false;
 
 portfolioButton.addEventListener("click", () => {
-  window.location.replace("https://portfoliomax.netlify.app/");
+  window.location.replace("https://maxbungay.com");
 });
 
 // Start and restart a game:
